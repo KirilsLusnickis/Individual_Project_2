@@ -3,11 +3,31 @@ import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-drink-list',
+  standalone: true,
   templateUrl: './drink-list.component.html',
   styleUrls: ['./drink-list.component.css']
 })
 export class DrinkListComponent implements OnInit {
-  drinks: any[] = [];
+  drinks: any[] = [
+    {
+      id: 1,
+      name: 'Coca Cola',
+      price: 1.5,
+      quantity: 10
+    },
+    {
+      id: 2,
+      name: 'Pepsi',
+      price: 1.5,
+      quantity: 10
+    },
+    {
+      id: 3,
+      name: 'Fanta',
+      price: 1.5,
+      quantity: 10
+    }
+  ];
 
   constructor(private apiService: ApiService) {}
 
